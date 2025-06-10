@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#app,
+.container {
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    background-color: var(--bg-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+.el-textarea__inner {
+    resize: none;
+}
+
+.isWeb {
+    width: 60% !important;
+    height: 90% !important;
+}
+
+.el-button:hover {
+    transform: translateY(-1px);
+    // box-shadow: 0 6px 8px rgba(52, 152, 219, 0.3);
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.el-menu-item:active {
+    transform: scale(0.95);
+}
+
+.updateMenu {
+    overflow: hidden;
+}
+
+.updateBtn {
+    color: #e83737 !important;
+    &:hover {
+        font-weight: bold !important;
+        transform: scale(1.05);
+    }
+}
+
+.buildDialog {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}

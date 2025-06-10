@@ -1,0 +1,102 @@
+{
+    "$schema": "../gen/schemas/desktop-schema.json",
+    "identifier": "default",
+    "description": "Capability for the main window",
+    "windows": ["main", "PreView"],
+    "remote": {
+        "urls": [
+            "https://**",
+            "file://**",
+            "http://**",
+            "asset://localhost/**",
+            "https://api.github.com/**",
+            "https://payjs.cn/**"
+        ]
+    },
+    "permissions": [
+        "core:default",
+        "core:app:allow-default-window-icon",
+        "core:app:allow-app-hide",
+        "core:app:allow-app-show",
+        "core:app:allow-set-app-theme",
+        "core:app:allow-name",
+        "core:window:allow-set-title",
+        "core:event:allow-emit",
+        "core:event:allow-listen",
+        "core:window:allow-unminimize",
+        "core:window:allow-set-focus",
+        "core:window:allow-show",
+        "core:window:allow-unmaximize",
+        "core:window:allow-minimize",
+        "core:window:allow-set-size",
+        "core:window:allow-toggle-maximize",
+        "core:window:allow-start-dragging",
+        "core:window:allow-close",
+        "core:window:allow-internal-toggle-maximize",
+        "updater:allow-check",
+        "updater:allow-download",
+        "updater:allow-install",
+        "updater:allow-download-and-install",
+        "process:default",
+        "process:allow-restart",
+        "process:allow-exit",
+        "opener:default",
+        "http:allow-fetch",
+        "http:default",
+        "http:allow-fetch-cancel",
+        "http:allow-fetch-read-body",
+        "http:allow-fetch-send",
+        "dialog:allow-open",
+        "os:allow-locale",
+        "clipboard-manager:allow-write-text",
+        {
+            "identifier": "http:default",
+            "allow": [
+                {
+                    "url": "https://**"
+                },
+                {
+                    "url": "file://**"
+                },
+                {
+                    "url": "http://**"
+                },
+                {
+                    "url": "asset://localhost/**"
+                },
+                {
+                    "url": "https://api.github.com/**"
+                },
+                {
+                    "url": "https://payjs.cn/**"
+                }
+            ]
+        },
+        {
+            "identifier": "fs:scope",
+            "allow": [
+                "**",
+                "$APPDATA/**",
+                "$RESOURCE/../**",
+                "$HOME/**",
+                "$DOWNLOAD/**",
+                "$ASSETS/**",
+                "$TEMP/**",
+                "asset://localhost/**"
+            ]
+        },
+        "fs:allow-read-file",
+        "fs:allow-exists",
+        "fs:allow-write-file",
+        "fs:allow-app-write",
+        "fs:allow-app-read",
+        "fs:allow-app-read-recursive",
+        "fs:allow-app-write-recursive",
+        "fs:allow-appcache-write",
+        "fs:allow-appcache-write-recursive",
+        "fs:allow-appconfig-write",
+        "fs:allow-appconfig-write-recursive",
+        "fs:allow-appdata-write",
+        "fs:allow-appdata-write-recursive"
+    ]
+}

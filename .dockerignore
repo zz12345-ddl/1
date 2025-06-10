@@ -1,0 +1,67 @@
+# 排除不必要的文件和目录
+node_modules
+target
+dist
+build
+output
+
+# Git相关
+.git
+.gitignore
+
+# IDE和编辑器
+.vscode
+.idea
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 临时文件
+*.tmp
+*.temp
+
+# 环境文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 缓存目录
+.cache
+.parcel-cache
+
+# 构建输出
+src-tauri/target
+docs/dist
+
+# AI工作区（如果存在）
+.ai_workspace
+.cursor
+
+# 文档相关
+README*.md
+LICENSE
+*.md
+docs/
+
+# 脚本文件（除了构建脚本）
+scripts/
+
+# 测试文件
+__tests__
+*.test.js
+*.spec.js
+
+# 包文件
+*.tgz
+*.tar.gz
