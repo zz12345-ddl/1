@@ -11,10 +11,10 @@ export default {
     testSuccess: 'トークンが利用可能です',
     projectName: 'プロジェクト名',
     projectNamePlaceholder:
-        '英語のプロジェクト名を入力してください（例: PakePlus）',
+        '英語のプロジェクト名を入力してください（例: WebAppBuilder）',
     releaseBody:
         'このバージョンのリソースをダウンロードおよびインストールするには、参照してください',
-    aboutTitle: 'PakePlusについて',
+    aboutTitle: 'WebAppBuilderについて',
     aboutTips:
         'オープンソース無料、数分でクロスプラットフォームアプリをパッケージ化',
     configToken: 'まずトークンを設定してください',
@@ -112,7 +112,7 @@ export default {
     copySuccess: 'コピー成功',
     delSuccess: '削除成功',
     aboutGuide:
-        'PakePlusはオープンソースで無料です。Webページをパッケージしてクロスプラットフォームアプリを作成するには、Githubトークンが1つだけ必要です。Windows、macOS、Linuxシステムをサポートし、Android、iOSモバイル端末もサポートします。質問がある場合は、私のWeChatに連絡してください：lanxingme（注：PakePlus）、または私にメールを送信してください：{email}',
+        'WebAppBuilderはオープンソースで無料です。Githubトークンは基本的な使用では任意です。Webページをパッケージしてクロスプラットフォームアプリを作成できます。Windows、macOS、Linuxシステムをサポートし、Android、iOSモバイル端末もサポートします。質問がある場合は、メールを送信してください：{email}',
     moreConfig: 'より多くの設定',
     superpower: '能力',
     scriptFile: 'スクリプトファイル',
@@ -157,7 +157,7 @@ export default {
     staticPreview: '静的資源は預覧できません',
     htmlError: '静的資源を切り替えた後、1分待ってから預覧してください',
     initError:
-        '初期化に失敗しました。PakePlusリポジトリを手動で削除して再試行してください',
+        '初期化に失敗しました。WebAppBuilderリポジトリを手動で削除して再試行してください',
     single: 'シングル',
     singleTips: 'シングルモードでは、1つのプログラムしか開けません',
     deleteRelease: '現在のリリースを削除しますか？',
@@ -203,7 +203,7 @@ export default {
     copyAddress: 'アドレスをコピー',
     sponsor: 'スポンサー',
     sponsorTips:
-        'PakePlusプロジェクトにご興味をお持ちの場合は、スポンサーになってください。あなたの支持は私たちの動力です。スポンサー時には必ずメッセージを入力してください。これにより、スポンサーリストに記録され、あなたの支持と励ましに感謝します！',
+        'WebAppBuilderプロジェクトにご興味をお持ちの場合は、スポンサーになってください。あなたの支持は私たちの動力です。スポンサー時には必ずメッセージを入力してください。これにより、スポンサーリストに記録され、あなたの支持と励ましに感謝します！',
     sponsorList: 'スポンサーリスト',
     sponsorListTips: 'あなたの支持と励ましに感謝します！',
     buildTips: 'ビルド中は何も操作しないでください...',

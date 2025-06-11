@@ -451,7 +451,7 @@ pub async fn support_pp(_: AppHandle, token: String) {
     let request = client
         .request(
             reqwest::Method::PUT,
-            "https://api.github.com/user/following/Sjj1024",
+            &format!("https://api.github.com/user/following/{}", "your-username"),
         )
         .headers(headers);
     let response = request.send().await.unwrap();
@@ -474,7 +474,7 @@ pub async fn support_pp(_: AppHandle, token: String) {
     let request = client
         .request(
             reqwest::Method::PUT,
-            "https://api.github.com/user/starred/Sjj1024/PakePlus",
+            &format!("https://api.github.com/user/starred/{}/{}", "your-username", "WebAppBuilder"),
         )
         .headers(headers.clone());
     let response = request.send().await.unwrap();
@@ -492,7 +492,7 @@ pub async fn support_pp(_: AppHandle, token: String) {
     let request = client
         .request(
             reqwest::Method::PUT,
-            "https://api.github.com/user/starred/Sjj1024/PakePlus-Android",
+            &format!("https://api.github.com/user/starred/{}/{}-Android", "your-username", "WebAppBuilder"),
         )
         .headers(headers.clone());
     let response = request.send().await.unwrap();

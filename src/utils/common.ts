@@ -10,8 +10,8 @@ import CryptoJS from 'crypto-js'
 import QRCode from 'qrcode'
 
 // upstream repo info
-export const upstreamUser = 'Sjj1024'
-export const ppRepo: string[] = ['PakePlus', 'PakePlus-Android', 'PakePlus-iOS']
+export const upstreamUser = 'your-username'
+export const ppRepo: string[] = [repositoryConfig.repo, `${repositoryConfig.repo}-Android`, `${repositoryConfig.repo}-iOS`]
 
 export const mainBranch = 'main'
 export const webBranch = 'web3'
@@ -20,36 +20,38 @@ export const devBranch = 'dev'
 // global file size limit
 export const fileSizeLimit = 1024 * 1024 * 10
 
-// urlMap
+import { repositoryConfig, gitHubUrls } from '@/config/repository'
+
+// urlMap - 现在使用动态配置
 export const urlMap = {
-    pakeplus: 'https://www.pakeplus.com/',
-    github: 'https://github.com/Sjj1024/PakePlus',
-    ppofficial: 'https://ppofficial.pages.dev/',
-    configdoc: 'https://ppofficial.pages.dev/guide/config.html',
-    phonedoc: 'https://www.pakeplus.com/guide/phone.html',
-    pakeplusdev: 'https://pakeplus.pages.dev/',
-    weixin: 'https://github.com/Sjj1024/PakePlus',
+    [repositoryConfig.repo.toLowerCase()]: gitHubUrls.pages,
+    github: gitHubUrls.github,
+    official: gitHubUrls.pages,
+    configdoc: `${gitHubUrls.pages}/guide/config.html`,
+    phonedoc: `${gitHubUrls.pages}/guide/phone.html`,
+    [`${repositoryConfig.repo.toLowerCase()}dev`]: gitHubUrls.pages,
+    weixin: '',
     qq: '',
-    email: '1024xiaoshen@gmail.com',
-    website: '',
+    email: repositoryConfig.email || 'your-email@example.com',
+    website: gitHubUrls.pages,
     x: '',
     google: '',
-    csdn: 'https://xiaoshen.blog.csdn.net/',
-    juejin: 'https://juejin.cn/user/70007368988926',
-    gitee: 'https://gitee.com/xiaoshen-1024',
-    bilibili: 'https://space.bilibili.com/405719127?spm_id_from=333.33.0.0',
-    twitter: 'https://x.com/1024xiaoshen',
-    youtube: 'https://www.youtube.com/@1024xiaoshen',
+    csdn: '',
+    juejin: '',
+    gitee: '',
+    bilibili: '',
+    twitter: '',
+    youtube: '',
     douyin: '',
     tiktok: '',
     windowsConfig: 'https://v2.tauri.app/reference/config/#windowconfig',
 }
 
-// platform map
+// platform map - 使用动态配置
 export const platformMap = {
-    PakePlus: 'desktop',
-    'PakePlus-iOS': 'ios',
-    'PakePlus-Android': 'android',
+    [repositoryConfig.repo]: 'desktop',
+    [`${repositoryConfig.repo}-iOS`]: 'ios',
+    [`${repositoryConfig.repo}-Android`]: 'android',
 }
 
 export const platforms: { [key: string]: PlatformInfo } = {

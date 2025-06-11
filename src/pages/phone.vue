@@ -1228,11 +1228,10 @@ const activeDistInput = async () => {
         loadHtml()
     } else {
         if (!store.token) {
-            oneMessage.error(t('configToken'))
-            return
-        } else {
-            distInput.value.click()
+            oneMessage.warning(t('noTokenWarning'))
+            // 继续执行，不阻止用户操作
         }
+        distInput.value.click()
     }
 }
 

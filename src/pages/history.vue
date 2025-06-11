@@ -150,6 +150,7 @@ import { ArrowLeft, Delete } from '@element-plus/icons-vue'
 import githubApi from '@/apis/github'
 import { openUrl, isTauri, copyText, oneMessage } from '@/utils/common'
 import { useI18n } from 'vue-i18n'
+import { repositoryConfig } from '@/config/repository'
 
 const router = useRouter()
 const store = usePPStore()
@@ -191,7 +192,7 @@ const deleteRelAssets = async () => {
     if (store.currentRelease.id !== 0) {
         const releaseRes: any = await githubApi.deleteRelease(
             store.userInfo.login,
-            'PakePlus',
+            repositoryConfig.repo,
             store.currentRelease.id
         )
         console.log('deleteRelease', releaseRes)

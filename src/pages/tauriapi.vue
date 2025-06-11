@@ -74,7 +74,7 @@
                             <el-icon>
                                 <span class="iconfont tauriIcon">&#xe6a4;</span>
                             </el-icon>
-                            <span>PakePlusApi</span>
+                            <span>WebAppBuilderApi</span>
                         </template>
                         <el-menu-item index="3-1">{{
                             t('linkTo')
@@ -735,7 +735,7 @@ const getTauriVersionApi = async () => {
 const getVersionApi = async () => {
     const version = await getVersion()
     console.log('version', version)
-    textarea.value = 'pakeplus version:' + version
+    textarea.value = 'webappbuilder version:' + version
 }
 
 const hideApi = async () => {
@@ -767,7 +767,7 @@ const listenEvent = async () => {
 
 // event:发送事件
 const sendEvent = async () => {
-    await emit('my-event', { message: 'Hello, PakePlus!' })
+    await emit('my-event', { message: 'Hello, WebAppBuilder!' })
 }
 
 // event:取消监听

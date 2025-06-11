@@ -1,25 +1,26 @@
-<h4 align="right"> 
-<span href=".README.md">English</span> 
-<a href="http://www.pakeplus.com/" 
-style="margin: 0 10px;" >简体中文</a> 
-<a href="https://github.com/Sjj1024/PakePlus/discussions/108">日本语</a>
-</h4>  
-<p align="center">
-    <img src="https://github.com/Sjj1024/PakePlus/raw/main/docs/static/imgs/pakeplus.png" width=138/>
-</p>  
-<h1 align="center">PakePlus</h1>  
-<p align="center"><strong>Turn any webpage/Vue/React and so on into desktop and mobile app under 5M with easy in few minutes</strong></p>
+# WebAppBuilder
+
+<span href=".README.md">English</span>
+| <a href="README_ZH.md">简体中文</a>
+| <a href="README_JP.md">日本語</a>
 
 <p align="center">
-    <a href="https://github.com/Sjj1024/PakePlus/releases"><img src="https://img.shields.io/github/v/release/Sjj1024/PakePlus?style=flat-square&logo=github" alt="Release"></a>
-    <a href="https://github.com/Sjj1024/PakePlus/stargazers"><img src="https://img.shields.io/github/stars/Sjj1024/PakePlus?style=flat-square&logo=github" alt="Stars"></a>
-    <a href="https://github.com/Sjj1024/PakePlus/stargazers"><img src="https://img.shields.io/github/forks/Sjj1024/PakePlus?style=flat-square&logo=github" alt="Forks"></a>
-    <a href="https://github.com/Sjj1024/PakePlus/actions/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/Sjj1024/PakePlus/build.yml?style=flat-square&logo=github" alt="Build"></a>
-    <a href="https://github.com/Sjj1024/PakePlus/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sjj1024/PakePlus?style=flat-square&logo=github" alt="License"></a>
-    <a href="https://hellogithub.com/repository/d148f8fac78b45fe9b94c82757c3f86b" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=d148f8fac78b45fe9b94c82757c3f86b&claim_uid=LXfeQOxRDEmSUGC&theme=small" alt="Featured｜HelloGitHub"></a>
+  <img src="https://gw.alipayobjects.com/zos/k/fa/logo-modified.png" alt="WebAppBuilder" width="120" height="120" />
 </p>
 
-<div align="left">PakePlus supports Mac, Windows, Linux, and Android & iOS. There’s no need to install complex dependencies locally— all you need is a Github Token. Plus, PakePlus is only about 10MB in size. For the latest version, please see the <a href="[#popular-packages](https://github.com/Sjj1024/PakePlus/releases)">release page</a>. or visit: <a href="https://pakeplus.pages.dev" target="_blank">PakePlus Web</a>. Check the README for information on <a href="#popular-packages">popular packages</a> and <a href="#development">custom development</a>. Feel free to share your suggestions in the <a href="https://github.com/Sjj1024/PakePlus/discussions">discussion area</a>.</div>
+<h1 align="center">WebAppBuilder</h1>
+<div align="center">
+  <a href="https://github.com/your-username/WebAppBuilder/releases" target="_blank">
+    <img alt="GitHub downloads" src="https://img.shields.io/github/downloads/your-username/WebAppBuilder/total.svg?style=flat-square" />
+  </a>
+  <a href="https://github.com/your-username/WebAppBuilder/releases" target="_blank">
+    <img alt="GitHub release" src="https://img.shields.io/github/release/your-username/WebAppBuilder.svg?style=flat-square" />
+  </a>
+</div>
+
+<div align="center">Turn any webpage into a desktop app with Rust. 🤱</div>
+
+<div align="left">WebAppBuilder supports Mac, Windows, Linux, and Android & iOS. There's no need to install complex dependencies locally— Github Token is optional for basic usage. Plus, WebAppBuilder is only about 10MB in size. For the latest version, please see the <a href="https://github.com/your-username/WebAppBuilder/releases">release page</a>. Check the README for information on <a href="#popular-packages">popular packages</a> and <a href="#development">custom development</a>.</div>
 
 https://github.com/user-attachments/assets/b88bf541-0b26-4020-9eec-da79e1734fc9
 

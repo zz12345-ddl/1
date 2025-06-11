@@ -17,8 +17,8 @@
     <a href="https://hellogithub.com/repository/d148f8fac78b45fe9b94c82757c3f86b" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=d148f8fac78b45fe9b94c82757c3f86b&claim_uid=LXfeQOxRDEmSUGC&theme=small" alt="Featured｜HelloGitHub"></a>
 </p>
 
-<div align="left">PakePlus は Mac、Windows、および Linux に対応しており、Android と iOS も間もなくサポート予定です。ローカルに複雑な依存環境をインストールする必要はなく、Github トークンだけで利用できます。また、PakePlus 自体のサイズはわずか約5MBです。最新バージョンについては<a href="[#popular-packages](https://github.com/Sjj1024/PakePlus/releases)">リリースページ</a>をご確認ください。また、PakePlus Web 版も利用できます。<a href="URL_ADDRESS また、PakePlus Web 版も利用できます。<a href="https://pakeplus.pages.dev" target="_blank">PakePlus Web</a>。
-<a href="#popular-packages">人気パッケージ</a>や<a href="#development">カスタム開発</a>については README をご覧ください。<a href="https://github.com/Sjj1024/PakePlus/discussions">ディスカッションエリア</a>でご意見をお待ちしています。</div>
+<div align="left">WebAppBuilderはMac、Windows、Linuxだけでなく、AndroidとiOSもサポートしています。ローカルに依存関係をインストールする必要はありません。Github Tokenはオプションです。さらに、WebAppBuilder自体のサイズはわずか5MB程度です。最新バージョンについては、<a href="https://github.com/your-username/WebAppBuilder/releases">リリースページ</a>をご覧ください。
+<a href="#popular-packages">人気パッケージ</a>や<a href="#development">カスタム開発</a>については README をご覧ください。</div>
 
 https://github.com/user-attachments/assets/b88bf541-0b26-4020-9eec-da79e1734fc9
 

@@ -9,9 +9,9 @@ export default {
     confirm: '확인',
     testSuccess: '토큰 사용 가능',
     projectName: '프로젝트 이름',
-    projectNamePlaceholder: '영어 프로젝트 이름을 입력하세요 (예: PakePlus)',
+    projectNamePlaceholder: '영어 프로젝트 이름을 입력하세요 (예: WebAppBuilder)',
     releaseBody: '이 버전의 리소스를 다운로드 및 설치하려면 참조하세요.',
-    aboutTitle: 'PakePlus에 대하여',
+    aboutTitle: 'WebAppBuilder에 대하여',
     aboutTips: '오픈 소스 무료, 플랫폼 간 APP 포장 몇 분 만에 가능',
     configToken: '먼저 토큰을 설정하세요',
     tokenOk: '토큰이 유효합니다',
@@ -109,7 +109,7 @@ export default {
     copySuccess: '복사 성공',
     delSuccess: '삭제 성공',
     aboutGuide:
-        'PakePlus는 오픈 소스이며 무료입니다. Github Token 하나만 있으면 웹 페이지를 패키징하여 크로스 플랫폼 앱을 만들 수 있습니다. Windows, macOS, Linux 시스템을 지원하며, 미래에는 Android, iOS 등 모바일 플랫폼도 지원할 것입니다. 문제가 있으시면 저의 WeChat에 추가하세요: lanxingme (참고: PakePlus), 또는 제 이메일을 보내세요: {email}',
+        'WebAppBuilder는 오픈 소스이며 무료입니다. Github Token은 기본 사용에 선택사항입니다. 웹 페이지를 패키징하여 크로스 플랫폼 앱을 만들 수 있습니다. Windows, macOS, Linux 시스템을 지원하며, 미래에는 Android, iOS 등 모바일 플랫폼도 지원할 것입니다. 문제가 있으시면 이메일을 보내세요: {email}',
     followme: '關注小神',
     moreConfig: '더 많은 설정',
     superpower: '능력',
@@ -155,7 +155,7 @@ export default {
     staticPreview: '정적 자산은 미리보기를 지원하지 않습니다',
     htmlError: '정적 자산을 변경한 후 1분 기다리세요',
     initError:
-        '초기화 실패, PakePlus 저장소를 수동으로 삭제하고 다시 시도하세요',
+        '초기화 실패, WebAppBuilder 저장소를 수동으로 삭제하고 다시 시도하세요',
     single: '싱글',
     singleTips: '싱글 모드에서는 하나의 프로그램만 열 수 있습니다',
     deleteRelease: '현재 릴리스를 삭제하시겠습니까?',
@@ -200,7 +200,7 @@ export default {
     copyAddress: '주소 복사',
     sponsor: '후원',
     sponsorTips:
-        'PakePlus 프로젝트에 관심이 있으시다면, 후원해주세요. 당신의 지지는 우리의 열정을 움직이는 힘입니다. 후원 시 반드시 메시지를 입력하세요. 이는 후원 목록에 기록되며, 당신의 지지와 격려에 감사드립니다!',
+        'WebAppBuilder 프로젝트에 관심이 있으시다면, 후원해주세요. 당신의 지지는 우리의 열정을 움직이는 힘입니다. 후원 시 반드시 메시지를 입력하세요. 이는 후원 목록에 기록되며, 당신의 지지와 격려에 감사드립니다!',
     sponsorList: '후원 목록',
     sponsorListTips: '당신의 지지와 격려에 감사드립니다!',
     buildTips: '빌드 중 아무 작업도 하지 마세요...',

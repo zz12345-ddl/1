@@ -1,8 +1,8 @@
 {
     "$schema": "https://schema.tauri.app/config/2",
-    "productName": "PakePlus",
-    "version": "../package.json",
-    "identifier": "com.pakeplus.app",
+    "productName": "WebAppBuilder",
+        "version": "../package.json",
+        "identifier": "com.webappbuilder.app",
     "build": {
         "beforeDevCommand": "pnpm dev",
         "devUrl": "http://localhost:1420",
@@ -55,8 +55,8 @@
         "updater": {
             "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEI0MkI3NDVCOUM2NDE1QTgKUldTb0ZXU2NXM1FydEsrN29Edjg2c0kxZmk1YWpRa3ZUMjE1S2NLeGVFRkJRWW1SSnhXQ2F3S0EK",
             "endpoints": [
-                "https://gh-proxy.com/github.com/Sjj1024/PakePlus/releases/latest/download/ppupdate.json",
-                "https://files.pakeplus.com/ppupdate.json"
+                "https://api.github.com/repos/your-username/WebAppBuilder/releases/latest",
+                "https://your-domain.com/update.json"
             ],
             "windows": {
                 "installMode": "passive"

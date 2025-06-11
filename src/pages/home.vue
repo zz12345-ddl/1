@@ -89,7 +89,7 @@
                 @click="goProject(pro)"
             >
                 <img
-                    :src="pro.icon || pakePlusIcon"
+                    :src="pro.icon || webAppBuilderIcon"
                     class="appIcon"
                     alt="appIcon"
                 />
@@ -107,7 +107,7 @@
             <div class="project" @click="showBranchDialog">
                 <el-icon class="addIcon" :size="26"><Plus /></el-icon>
                 <img
-                    :src="pakePlusIcon"
+                    :src="webAppBuilderIcon"
                     class="appIcon"
                     alt="appIcon"
                     style="opacity: 0"
@@ -410,7 +410,7 @@ import {
     isDev,
 } from '@/utils/common'
 import ppconfig from '@root/scripts/ppconfig.json'
-import pakePlusIcon from '@/assets/images/pakeplus.png'
+import webAppBuilderIcon from '@/assets/images/webappbuilder.png'
 import { useI18n } from 'vue-i18n'
 import { getCurrentWindow } from '@tauri-apps/api/window'
 import packageJson from '../../package.json'
@@ -539,19 +539,17 @@ const selectMode = (mode: string) => {
     modeDialog.value = false
     
     if (mode === 'cloud') {
-        // 云端模式需要检查token
+        // 云端模式建议配置token
         if (store.token === '') {
-            oneMessage.warning(t('configToken'))
-            tokenDialog.value = true
-            return
-        } else {
-            getMainSha('PakePlus')
-            getWebSha('PakePlus')
-            getMainSha('PakePlus-iOS')
-            getWebSha('PakePlus-iOS')
-            getMainSha('PakePlus-Android')
-            getWebSha('PakePlus-Android')
+            oneMessage.warning(t('noTokenWarning'))
+            // 继续执行，不强制要求token
         }
+        getMainSha(repositoryConfig.repo)
+                getWebSha(repositoryConfig.repo)
+                getMainSha(`${repositoryConfig.repo}-iOS`)
+                getWebSha(`${repositoryConfig.repo}-iOS`)
+                getMainSha(`${repositoryConfig.repo}-Android`)
+                getWebSha(`${repositoryConfig.repo}-Android`)
     }
     // 显示项目名称输入对话框
     branchDialog.value = true
@@ -580,7 +578,7 @@ const testToken = async (tips: boolean = true) => {
                 localStorage.setItem('token', store.token)
                 store.setUser(res.data)
                 try {
-                    if (res.data.login !== 'Sjj1024') {
+                    if (res.data.login !== repositoryConfig.owner) {
                         await forkStartShas(tips)
                     } else {
                         await commitShas(tips)
@@ -629,7 +627,7 @@ const commitShas = async (tips: boolean = true) => {
                 if (res[0] && res[1] && res[2] && res[3]) {
                     // delete build.yml
                     let deleteRes = true
-                    if (store.noSjj1024) {
+                    if (store.noOwner) {
                         const pp = await deleteBuildYml(mainBranch, 'PakePlus')
                         const ppa = await deleteBuildYml(
                             mainBranch,

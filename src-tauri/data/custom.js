@@ -1,5 +1,5 @@
 console.log(
-    '%cbuild from PakePlus： https://github.com/Sjj1024/PakePlus',
+    '%cbuild from WebAppBuilder： https://github.com/your-username/WebAppBuilder',
     'color:orangered;font-weight:bolder'
 )
 

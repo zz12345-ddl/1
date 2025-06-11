@@ -1,5 +1,6 @@
 import http from '@/utils/request'
 // import http from '@/utils/http'
+import { repositoryConfig } from '@/config/repository'
 
 export default {
     // get github api rate limit
@@ -21,20 +22,20 @@ export default {
         })
     },
     // start repository
-    startProgect(repo: string) {
-        return http(`/user/starred/Sjj1024/${repo}`, {
+    startProgect(repo: string, owner: string = repositoryConfig.owner) {
+        return http(`/user/starred/${owner}/${repo}`, {
             method: 'put',
         })
     },
     // following user
-    followingUser() {
-        return http(`/user/following/Sjj1024`, {
+    followingUser(owner: string = repositoryConfig.owner) {
+        return http(`/user/following/${owner}`, {
             method: 'put',
         })
     },
     // creat project repository
-    forkProgect(repo: string, body: any) {
-        return http(`/repos/Sjj1024/${repo}/forks`, {
+    forkProgect(repo: string, body: any, owner: string = repositoryConfig.owner) {
+        return http(`/repos/${owner}/${repo}/forks`, {
             method: 'post',
             data: body,
         })
@@ -195,21 +196,22 @@ export default {
         })
     },
     // get update file contents
-    getUpdateFile() {
-        return http(`https://sjj1024.github.io/PakePlus/update.json`, {
+    getUpdateFile(owner: string = repositoryConfig.owner, repo: string = repositoryConfig.repo) {
+        const domain = repositoryConfig.domain ? `https://${repositoryConfig.domain}` : `https://${owner}.github.io/${repo}`
+        return http(`${domain}/update.json`, {
             method: 'get',
         })
     },
-    // get pakeplus info
-    getPakePlusInfo() {
-        return http(`/repos/Sjj1024/PakePlus/contents/package.json`, {
+    // get project info
+    getProjectInfo(owner: string = repositoryConfig.owner, repo: string = repositoryConfig.repo) {
+        return http(`/repos/${owner}/${repo}/contents/package.json`, {
             method: 'get',
         })
     },
     // get web config
-    getWebConfig(fileName: string, branch: string) {
+    getWebConfig(fileName: string, branch: string, owner: string = repositoryConfig.owner, repo: string = repositoryConfig.repo) {
         return http(
-            `/repos/Sjj1024/PakePlus/contents/src-tauri/data/${fileName}`,
+            `/repos/${owner}/${repo}/contents/src-tauri/data/${fileName}`,
             {
                 method: 'get',
                 params: {
@@ -226,8 +228,8 @@ export default {
         })
     },
     // creat issue
-    createIssue(body: any) {
-        return http(`/repos/Sjj1024/PakePlus/issues`, {
+    createIssue(body: any, owner: string = repositoryConfig.owner, repo: string = repositoryConfig.repo) {
+        return http(`/repos/${owner}/${repo}/issues`, {
             method: 'post',
             data: body,
         })

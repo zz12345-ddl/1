@@ -12,12 +12,12 @@
         <!-- content -->
         <div class="content">
             <div class="title">
-                <img :src="pakePlusIcon" alt="pakeplus" class="logo" />
-                <span class="pakeplus">PakePlus</span>
+                <img :src="webAppBuilderIcon" alt="webappbuilder" class="logo" />
+                <span class="pakeplus">WebAppBuilder</span>
             </div>
             <div class="description">
                 <p>
-                    {{ t('aboutGuide', { email: '1024xiaoshen@gmail.com' }) }}
+                    {{ t('aboutGuide', { email: 'your-email@example.com' }) }}
                     <!-- 或加入我们的群聊： -->
                     <!-- <el-popover
                         popper-class="popoverBox"
@@ -28,7 +28,7 @@
                             <span class="iconfont group"> &#xe64b; </span>
                         </template>
                         <img
-                            src="https://gh-proxy.com/github.com/Sjj1024/PakePlus/blob/main/docs/static/imgs/wxcode.png"
+                            src="https://your-domain.com/contact-qr.png"
                             alt=""
                             class="groupCode"
                         />
@@ -37,7 +37,7 @@
             </div>
             <div class="tools">
                 <p>
-                    <span>PakePlus：</span>
+                    <span>WebAppBuilder：</span>
                     <span class="link" @click="openUrl(urlMap.pakeplus)">
                         {{ urlMap.pakeplus }}
                     </span>
@@ -286,7 +286,7 @@
 </template>
 
 <script setup lang="ts">
-import pakePlusIcon from '@/assets/images/pakeplus.png'
+import webAppBuilderIcon from '@/assets/images/webappbuilder.png'
 import weixin from '@/assets/images/weixin.webp'
 import zhifubao from '@/assets/images/zhifubao.webp'
 import { useI18n } from 'vue-i18n'

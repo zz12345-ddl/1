@@ -2,6 +2,7 @@ import { convertToLocalTime, getPpconfig, getQrcode } from '@/utils/common'
 import { defineStore } from 'pinia'
 import githubApi from '@/apis/github'
 import ppconfig from '@root/scripts/ppconfig.json'
+import { repositoryConfig } from '@/config/repository'
 
 export const usePPStore = defineStore('pakeplus', {
     state: () => {
@@ -16,7 +17,7 @@ export const usePPStore = defineStore('pakeplus', {
                       avatar_url: '',
                       gravatar_id: '',
                       url: '',
-                      html_url: 'https://github.com/Sjj1024',
+                      html_url: `https://github.com/${repositoryConfig.owner}`,
                       followers_url: '',
                       following_url: '',
                       gists_url: '',
@@ -128,8 +129,8 @@ export const usePPStore = defineStore('pakeplus', {
         getAddAge: (state) => {
             return (num: number) => state.age + num
         },
-        noSjj1024: (state) => {
-            return state.userInfo.login !== 'Sjj1024'
+        noOwner: (state) => {
+            return state.userInfo.login !== repositoryConfig.owner
         },
         userName: (state) => {
             return state.userInfo.login
