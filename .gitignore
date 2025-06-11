@@ -54,3 +54,8 @@ docs/.vitepress/temp
 
 # tauri
 src-tauri/target
+
+# 忽略README文件，避免推送到远程仓库
+README.md
+README_ZH.md
+README_JP.md
