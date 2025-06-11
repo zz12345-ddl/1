@@ -156,12 +156,23 @@
                     >
                         {{ t('checkUpdate') }}
                     </el-dropdown-item>
+                    <el-dropdown-item @click="goConfig">
+                        项目配置
+                    </el-dropdown-item>
                     <el-dropdown-item @click="goAbout">
                         {{ t('superpower') }}
                     </el-dropdown-item>
                 </el-dropdown-menu>
             </template>
         </el-dropdown>
+        
+        <!-- 底部感谢说明 -->
+        <div class="footer-thanks">
+            <div class="thanks-text">
+                感谢 <a href="https://github.com/Sjj1024/PakePlus" target="_blank" class="thanks-link">Sjj1024/PakePlus</a> 项目
+            </div>
+        </div>
+        
         <!-- config github token and user info -->
         <el-dialog
             v-model="tokenDialog"
@@ -521,6 +532,11 @@ const goAbout = () => {
     } else {
         router.push('/about')
     }
+}
+
+// go config
+const goConfig = () => {
+    router.push('/config')
 }
 
 // new barnch config
@@ -1553,6 +1569,33 @@ onMounted(() => {
             &:hover {
                 transform: scale(1.05);
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+/* 底部感谢说明样式 */
+.footer-thanks {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    
+    .thanks-text {
+        font-size: 12px;
+        color: #666;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 4px 8px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        
+        .thanks-link {
+            color: #409eff;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
             }
         }
     }

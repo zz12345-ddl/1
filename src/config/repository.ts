@@ -8,12 +8,40 @@ export interface RepositoryConfig {
     email?: string // 联系邮箱（可选）
 }
 
-// 默认配置 - 用户需要修改这里的信息
-export const repositoryConfig: RepositoryConfig = {
-    owner: 'your-username', // 请修改为你的GitHub用户名
-    repo: 'WebAppBuilder', // 请修改为你的仓库名称
-    domain: 'your-domain.com', // 请修改为你的域名（可选）
-    email: 'your-email@example.com', // 请修改为你的邮箱（可选）
+// 默认配置
+const defaultConfig: RepositoryConfig = {
+    owner: 'your-username',
+    repo: 'WebAppBuilder',
+    domain: 'your-domain.com',
+    email: 'your-email@example.com',
+}
+
+// 从localStorage获取配置，如果没有则使用默认配置
+const getRepositoryConfig = (): RepositoryConfig => {
+    try {
+        const savedConfig = localStorage.getItem('pakePlus_config')
+        if (savedConfig) {
+            const parsed = JSON.parse(savedConfig)
+            return {
+                owner: parsed.owner || defaultConfig.owner,
+                repo: parsed.repo || defaultConfig.repo,
+                domain: parsed.domain || defaultConfig.domain,
+                email: parsed.email || defaultConfig.email,
+            }
+        }
+    } catch (error) {
+        console.error('读取配置失败，使用默认配置:', error)
+    }
+    return { ...defaultConfig }
+}
+
+// 导出配置（动态获取）
+export let repositoryConfig: RepositoryConfig = getRepositoryConfig()
+
+// 重新加载配置的函数
+export const reloadRepositoryConfig = (): RepositoryConfig => {
+    repositoryConfig = getRepositoryConfig()
+    return repositoryConfig
 }
 
 // 生成GitHub相关URL的辅助函数

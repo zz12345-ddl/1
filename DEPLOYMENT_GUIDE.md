@@ -4,18 +4,31 @@
 
 ## 快速开始
 
-### 1. 修改配置文件
+### 方式一：图形界面配置（推荐）
 
-编辑 `src/config/repository.ts` 文件，将配置信息修改为您自己的：
+1. 启动应用后，点击右上角版本号下拉菜单中的「项目配置」
+2. 在配置页面填写以下信息：
+   - **GitHub用户名**：您的GitHub用户名或组织名
+   - **仓库名称**：您的应用仓库名称
+   - **自定义域名**：您的域名（可选，留空将使用GitHub Pages默认域名）
+   - **联系邮箱**：您的联系邮箱（可选）
+3. 点击「保存配置」按钮
+4. 重启应用使配置生效
+
+### 方式二：手动修改配置文件
+
+如果您熟悉代码，也可以直接修改 `src/config/repository.ts` 文件中的配置信息：
 
 ```typescript
 export const repositoryConfig = {
-  owner: 'your-github-username',    // 您的 GitHub 用户名
-  repo: 'YourAppName',              // 您的应用名称
-  domain: 'your-domain.com',        // 您的域名（可选）
-  email: 'your-email@example.com'  // 您的邮箱（可选）
+    owner: 'your-github-username',    // 替换为您的GitHub用户名
+    repo: 'YourAppName',             // 替换为您的应用名称
+    domain: 'your-domain.com',       // 替换为您的域名（可选）
+    email: 'your-email@example.com'  // 替换为您的邮箱（可选）
 }
 ```
+
+> **注意**：推荐使用图形界面配置，更加简单直观，无需修改代码。
 
 ### 2. 运行配置脚本
 

@@ -5,6 +5,7 @@ import Phone from '@/pages/phone.vue'
 import History from '@/pages/history.vue'
 import About from '@/pages/about.vue'
 import TauriApi from '@/pages/tauriapi.vue'
+import Config from '@/pages/config.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -13,6 +14,7 @@ const routes = [
     { path: '/history', component: History },
     { path: '/about', component: About },
     { path: '/tauriapi', component: TauriApi },
+    { path: '/config', component: Config },
 ]
 
 const router = createRouter({
