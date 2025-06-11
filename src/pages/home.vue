@@ -420,6 +420,7 @@ import {
     ppRepo,
     isDev,
 } from '@/utils/common'
+import { repositoryConfig } from '@/config/repository'
 import ppconfig from '@root/scripts/ppconfig.json'
 import webAppBuilderIcon from '@/assets/images/webappbuilder.png'
 import { useI18n } from 'vue-i18n'
